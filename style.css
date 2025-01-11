@@ -1,0 +1,294 @@
+:root {
+  --bg: #0a0811;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+div {
+  position: absolute;
+}
+
+.main-logo {
+  width: 238px;
+  height: 229px;
+  scale: 1.5;
+  display: flex; /* Flexbox activa */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  position: relative; 
+}
+
+.cuerpo{
+  width: 150px;
+  height: 100px;
+  background-color: rgb(245, 110, 193);
+  border-radius: 10px;
+  border: 2px solid rgb(83, 6, 59);
+  position: relative;
+  overflow: hidden; ;
+}
+
+.cuerpo-sombras{
+  width: 90px;
+  height: 120px;
+  background-color: rgb(175, 63, 140);
+  position: absolute;
+  top: 0;
+  left: 100px;
+  z-index: 0;
+}
+
+.cuerpo-sombras::after{
+  content: "";
+  width: 120px;
+  height: 12px;
+  background-color: rgb(175, 63, 140);
+  border-radius: 10px;
+  position: absolute;
+  top: 90px;
+  left: -100px;
+  z-index: 0;
+}
+
+.cuerpo-sombras::before{
+  content: "";
+  width: 90px;
+  height: 90px;
+  background-color: rgb(245, 110, 193);
+  border-radius: 50% 50% ;
+  position: absolute;
+  top:0px;
+  left: -50px;
+  z-index: 1;
+}
+
+.patas{
+  width: 15px;
+  height: 40px;
+  background-color: rgb(245, 110, 193);
+  border-radius: 10px;
+  border: 2px solid rgb(83, 6, 59);
+  position: absolute;
+}
+
+.traseras {
+  top: 140px;
+  left: 60px;
+  background-color: rgb(153, 21, 111);
+  z-index: -1;
+}
+
+ .traseras::after{
+  content: "";
+  width: 15px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid rgb(83, 6, 59);
+  background-color: rgb(153, 21, 111);
+  position: absolute;
+  top: 0;
+  left: 80px;
+}
+
+.delanteras {
+  top: 145px;
+  left: 80px;
+  background-color: rgb(245, 110, 193);
+  clip-path: inset(10px 0 0 0 round 10px 10px 0 0);
+  box-shadow: inset -3px 0 0 0 rgb(155, 58, 124);
+}
+
+
+ .delanteras-derecha{
+  width: 15px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid rgb(83, 6, 59);
+  background-color: rgb(245, 110, 193);
+  position: absolute;
+  top: 145px;
+  left: 160px;
+  clip-path: inset(10px 0 0 0 round 10px 10px 0 0);
+  box-shadow: inset -3px 0 0 0 rgb(155, 58, 124);
+}
+
+.hocico{
+  width: 60px;
+  height: 30px;
+  background-color: rgb(245, 110, 193);
+  border: 2px solid rgb(83, 6, 59);
+  border-radius: 10px;
+  left: 30px;
+  top: 100px;
+  overflow: hidden;
+  box-shadow: 5px 2px 0 0px rgb(175, 63, 140); /*somra nariz*/
+}
+
+.hocico-sombras{ /* Sombra hocico horizontal */
+  height: 7px;
+  width: 60px;
+  background-color: rgb(155, 58, 124);
+  left:-10;
+  top: 25px;
+  border-radius: 2px;
+  position:absolute;
+}
+
+.hocico-sombras::after{ /* Sombra hocico vertical */
+  content: "";
+  height: 100px;
+  width: 30px;
+  background-color: rgb(155, 58, 124);
+  left: 40px;
+  top: -30px;
+  border-radius: 2px;
+  position:absolute;
+}
+
+.hocico-sombras::before{ /* Sombra recorte circunferencia */
+  content: "";
+  height:26px;
+  width: 26px;
+  background-color: rgb(245, 110, 193);
+  left: 29px;
+  top: -26px;
+  border-radius: 50% 50% 50% 50%;
+  position:absolute;
+  z-index: 2;
+}
+
+.fosas{
+  width: 10px;
+  height: 20px;
+  background-color: rgb(46, 4, 32);
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 10px;
+  z-index: 2;
+  box-shadow: -2px 0 0 0 rgb(249, 165, 224);
+}
+
+.fosas::after{
+  content: "";
+  width: 10px;
+  height: 20px;
+  background-color: rgb(46, 4, 32);
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  z-index: 2;
+  box-shadow: -2px 0 0 0 rgb(249, 165, 224);
+}
+
+.oreja-dcha{
+  width: 10px;
+  height: 30px;
+  background-color: rgb(245, 110, 193);
+  border-radius: 50%;
+  border: 2px solid rgb(83, 6, 59);
+  clip-path: inset(0 0 10px 0 round 0 0 10px 10px);
+  position: absolute;
+  top: 45px;
+  left: 70px;
+  box-shadow: inset -2px 0 0 0 rgb(155, 58, 124);
+}
+
+.oreja-izqda{
+  content: "";
+  width: 10px;
+  height: 30px;
+  background-color: rgb(245, 110, 193);
+  border-radius: 50%;
+  border: 2px solid rgb(83, 6, 59);
+  clip-path: inset(0 0 10px 0 round 0 0 10px 10px);
+  position: absolute;
+  top: 45px;
+  left: 50px;
+  z-index: 1;
+  box-shadow: inset -2px 0 0 0 rgb(155, 58, 124);
+}
+
+.ojos{
+  width: 15px;
+  height: 2px;
+  background-color: rgb(46, 4, 32);
+  border-radius: 50%;
+  position: absolute;
+  top: 90px;
+  left: 50px;
+  z-index: 2;
+  
+}
+
+.ojos::after{
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: rgb(46, 4, 32);
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 18px;
+  z-index: 2;
+}
+
+.dientes{
+  width: 8px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  position: absolute;
+  top: 131px;
+  left: 45px;
+  z-index: 2;
+  box-shadow: 2px 0 0 0 rgb(182, 181, 181);
+}
+
+.dientes::after{
+  content: "";
+  width: 8px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  position: absolute;
+  top: 0px;
+  left: 12px;
+  z-index: 2;
+  box-shadow: 2px 0 0 0 rgb(182, 181, 181);
+}
+
+.sombra-suelo{
+  width: 238px;
+  height: 10px;
+  background-color: rgba(96, 93, 95, 0.377);
+  border-radius: 50%;
+  top: 180px;
+  z-index: -2;
+}
+
+.texto{
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: 'Roboto', monospace;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  top: 180px;
+  left: 50px;
+}
+
